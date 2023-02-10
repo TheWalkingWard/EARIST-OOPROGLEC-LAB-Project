@@ -27,7 +27,7 @@ function chart(item) {
     responsive: true,
     type: 'doughnut',
     data: {
-      labels: ['Food', 'Coffee and Out', 'Other', 'Shopping', 'Travelling'],
+      labels: ['Food', 'Grocery', 'Other', 'Shopping', 'Bills'],
       datasets: [
         {
           hover: true,
@@ -44,10 +44,10 @@ function chart(item) {
           borderColor: 'rgb(255, 99, 132)',
           data: [
             item.food,
-            item.coffeeAndOut,
+            item.grocery,
             item.other,
             item.shopping,
-            item.travel,
+            item.bills,
           ],
         },
       ],
@@ -82,10 +82,10 @@ function chart(item) {
           label: `${item['month']} ${item['year']}`,
           data: [
             item.food,
-            item.coffeeAndOut,
+            item.grocery,
             item.other,
             item.shopping,
-            item.travel,
+            item.bills,
           ],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -143,10 +143,10 @@ function addMonth() {
     income: JSON.parse(localStorage.getItem('Income')),
     total: JSON.parse(localStorage.getItem('Total')),
     food: getTotal('food'),
-    coffeeAndOut: getTotal('coffee_and_out'),
+    coffeeAndOut: getTotal('grocery'),
     other: getTotal('other'),
     shopping: getTotal('shopping'),
-    travel: getTotal('travel'),
+    travel: getTotal('bills'),
     balance: JSON.parse(localStorage.getItem('Balance')),
     notes: JSON.parse(localStorage.getItem('Notebook')),
   }
@@ -186,18 +186,18 @@ function showMonthAnalysis(item) {
     <span class='close-button'>x</span>
     <div>
         <h3>${item['month']} ${item['year']}</h3>
-        <p>Income for ${item['month']} ${item['year']}: ${item.income} pln</p>
-        <p>Spent Total: ${item.total} pln</p>
+        <p>Income for ${item['month']} ${item['year']}: ${item.income} php</p>
+        <p>Spent Total: ${item.total} php</p>
     </div>
     <div>
-    <p>Food: ${item.food} pln</p>
-    <p>Coffe and Out: ${item.coffeeAndOut} pln</p>
-    <p>Other: ${item.other} pln</p>
-    <p>Shopping: ${item.shopping} pln</p>
-    <p>Travel: ${item.travel} pln</p>
+    <p>Food: ${item.food} php</p>
+    <p>Coffe and Out: ${item.grocery} php</p>
+    <p>Other: ${item.other} php</p>
+    <p>Shopping: ${item.shopping} php</p>
+    <p>Travel: ${item.bills} php</p>
     </div>
     ${notes}
-    <p>Balance: ${item.balance} pln</p>
+    <p>Balance: ${item.balance} php</p>
     `
   chart(item)
 
