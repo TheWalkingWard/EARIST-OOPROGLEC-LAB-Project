@@ -15,8 +15,8 @@ const columnAmount = document.querySelectorAll('.amount')
 const priceInputs = document.querySelectorAll("[name='sum']")
 
 const FOOD = 'food'
-const COFFEE_AND_OUT = 'coffee_and_out'
-const TRAVEL = 'travel'
+const GROCERY = 'grocery'
+const BILLS = 'bills'
 const SHOPPING = 'shopping'
 const OTHER = 'other'
 
@@ -27,10 +27,10 @@ const user = {
     [FOOD]: {
       list: [],
     },
-    [COFFEE_AND_OUT]: {
+    [GROCERY]: {
       list: [],
     },
-    [TRAVEL]: {
+    [BILLS]: {
       list: [],
     },
     [SHOPPING]: {
@@ -44,8 +44,8 @@ const user = {
 
 let columnsTotal = {
   [FOOD]: 0,
-  [COFFEE_AND_OUT]: 0,
-  [TRAVEL]: 0,
+  [GROCERY]: 0,
+  [BILLS]: 0,
   [SHOPPING]: 0,
   [OTHER]: 0,
 }
