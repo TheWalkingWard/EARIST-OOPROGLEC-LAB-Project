@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markilay/project-budget.git"
+    "url": "git+https://github.com/TheWalkingWard/EARIST-OOPROGLEC-LAB-Project"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/markilay/project-budget/issues"
+    "url": "https://github.com/TheWalkingWard/EARIST-OOPROGLEC-LAB-Project"
   },
   "browserslist": [
     "last 1 chrome versions"
   ],
-  "homepage": "https://github.com/markilay/project-budget#readme"
+  "homepage": "https://github.com/TheWalkingWard/EARIST-OOPROGLEC-LAB-Project#readme"
 }
